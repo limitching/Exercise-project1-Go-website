@@ -59,6 +59,10 @@ main {
   flex-wrap: wrap;
 }
 
+main.no-flex {
+  display: block;
+}
+
 main section {
   padding: 1rem;
 }
@@ -97,4 +101,35 @@ p {
 
 section.right ul {
   margin-left: 2rem;
+}
+
+.player {
+  margin: 2rem;
+  border: 3px solid burlywood;
+  padding: 0.5rem;
+}
+
+.player h4 {
+  font-size: 1.5rem;
+  color: rgb(0, 90, 91);
+}
+
+.player h5 {
+  font-size: 1.05rem;
+  color: rgb(6, 120, 120);
+}
+
+div.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+div.japan img {
+  flex: 1 1 300px;
+  max-width: 60vh;
+}
+
+div.japan img {
+  flex: 3 1 600px;
 }
