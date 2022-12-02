@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>圍棋資訊網 | 日本棋院</title>
     <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["棋賽", "獎金(日幣)"],
+          ["棋聖", 45000000],
+          ["十段", 7000000],
+          ["本因坊", 28000000],
+          ["碁聖", 8000000],
+          ["名人", 30000000],
+          ["王座", 14000000],
+          ["天元", 13000000],
+        ]);
+
+        var options = {
+          title: "日本七大棋戰獎金分布圓餅圖",
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -72,8 +103,19 @@
               <li>天元：1300萬日幣</li>
             </ul>
           </div>
+          <div id="piechart"></div>
         </div>
       </section>
     </main>
+    <script
+      color="0,0,0"
+      opacity="0.3"
+      z-index="-2"
+      count="99"
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
+      integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
