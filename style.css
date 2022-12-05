@@ -96,10 +96,11 @@ section.right h3 {
   padding-top: 0.5rem;
 }
 p {
-  padding: 0.5rem, 0rem;
+  padding: 0.5rem 0rem;
 }
 
-section.right ul {
+section.right ul,
+ul {
   margin-left: 2rem;
 }
 
@@ -145,11 +146,28 @@ div.competition div.text {
   padding: 1rem;
 }
 
-div.competition div.text h3 {
+div.competition div.text h3,
+section.taiwan h3,
+section.china h3 {
   font-size: 2rem;
   color: rgb(12, 122, 92);
 }
 
 #piechart {
   flex: 1 1 300px;
+}
+
+.china table {
+  min-width: 1000px;
+}
+.china table,
+th,
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 2px 4px;
+}
+.china th {
+  background-color: rgb(86, 224, 192);
+  color: white;
 }
